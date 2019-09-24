@@ -140,11 +140,14 @@
                     </view>
                     <connections>
                         <outlet property="blueColorLabel" destination="BAr-wg-oQa" id="hRu-VN-Ab5"/>
+                        <outlet property="blueColorTextField" destination="vfs-jK-UUg" id="V9M-CC-RXH"/>
                         <outlet property="blueSlider" destination="vuq-WS-7TB" id="bC9-dM-poM"/>
                         <outlet property="colorView" destination="bQc-7M-LEw" id="Xsw-jU-R8j"/>
                         <outlet property="greenColorLabel" destination="xTl-hB-wuT" id="GhX-Oa-bYe"/>
+                        <outlet property="greenColorTextField" destination="Pz4-G3-qno" id="6af-Z8-c12"/>
                         <outlet property="greenSlider" destination="L8o-dY-eBM" id="kJe-4k-TNI"/>
                         <outlet property="redColorLabel" destination="PUA-WX-LDb" id="fV8-MD-oiR"/>
+                        <outlet property="redColorTextField" destination="i70-wM-MDb" id="uhE-jL-zUo"/>
                         <outlet property="redSlider" destination="dNx-H3-mHS" id="2eW-Yz-WwJ"/>
                     </connections>
                 </viewController>
