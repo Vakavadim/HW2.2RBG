@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         colorView.backgroundColor = viewBackgroundColor
     }
     
-        // метод изменения цвета view через филд
+        // метод изменения цвета view через textField
     private func changeByDoneButton() {
         
         guard let redColorTextFieldRaw = Float(redColorTextField.text!) else { return }
