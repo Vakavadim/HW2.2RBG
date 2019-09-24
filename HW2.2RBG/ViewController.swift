@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         startVoulemLable()
         startVoulemFields()
         
+        
 
         
     }
@@ -112,6 +113,28 @@ class ViewController: UIViewController {
             field?.text = roundRaw(volume: CGFloat(slider!.value))
         }
     }
+    
+    // метод не позволяющий отображать значение большее чем максимальное 
+    private func checkField() {
+        
+        guard Double(redColorTextField.text!) != nil else { return }
+        guard Double(greenColorTextField.text!) != nil else { return }
+        guard Double(blueColorTextField.text!) != nil else { return }
+        
+        let redFeild = Double(redColorTextField.text!)!
+        let greenFeild = Double(greenColorTextField.text!)!
+        let blueField = Double(blueColorTextField.text!)!
+        
+        let maxVoulume = Double(redSlider.maximumValue)
+        
+        if redFeild > maxVoulume {
+            redColorTextField.text = String(maxVoulume)
+        } else if greenFeild > maxVoulume {
+            greenColorTextField.text = String(maxVoulume)
+        } else if blueField > maxVoulume {
+            blueColorTextField.text = String(maxVoulume)
+        }
+    }
 
     
     
@@ -145,6 +168,7 @@ extension ViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         changeByDoneButton()
+        checkField()
         self.view.endEditing(true)
     }
     
@@ -174,6 +198,7 @@ extension ViewController: UITextFieldDelegate {
 
     @objc func doneButtonAction(){
         changeByDoneButton()
+        checkField()
         self.view.endEditing(true)
 
     }
